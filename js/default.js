@@ -35,6 +35,7 @@ function promptStickyAllot(sticky) {
 	sticky.css('z-index',10);
 	$('.user-box').css({'z-index':10,"backgroundColor":"#fff"});
 	$('.modal').animate({width:"100%",height:"100%"},10);
+	$('#side-bar-2').append("<i class='fa fa-times'></i>");
 }
 function allotToUser(user) {
 	addStickyFlag=false;
@@ -53,6 +54,14 @@ function allotToUser(user) {
 	if(is_chrome)
 		user.html($(selectedSticky).html());
 	selectedSticky.remove();
+	$('.fa-times').remove();
+	notFirstMouseover=false;
+}
+function cancelAllot() {
+	addStickyFlag=false;
+	$('.user-box').css({'z-index':10,"backgroundColor":"#1C2E40"});
+	$('.modal').animate({width:"0",height:"0"},10);
+	$('.fa-times').remove();
 	notFirstMouseover=false;
 }
 function unAllot(user) {
@@ -91,6 +100,10 @@ $(document).on('click', '.sticky', function(event) {
 		selectedSticky=this;
 		promptStickyAllot($(this));
 	}
+});
+
+$(document).on('click', '.fa-times', function(event) {
+	cancelAllot();
 });
 
 $(document).on('click','#icon-right', function(event) {
