@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>murcs</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="import" href="components/polymer/polymer.html">
+		<link rel="import" href="components/paper-button/paper-button.html">
+		<link rel="import" href="components/paper-tabs/paper-tabs.html">
+		<link rel="import" href="components/paper-input/paper-input.html">
+		<link rel="import" href="components/core-transition/core-transition.html">
+		<link rel="import" href="components/core-overlay/core-overlay.html">
+		<link rel="import" href="components/core-drag-drop/core-drag-drop.html">
+		<link rel="import" href="components/core-menu/core-menu.html">
+		<link rel="import" href="components/paper-radio-group/paper-radio-group.html">
+
+		<link rel="stylesheet" href="css/default.css">
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div class="user-box">
+			<!--add users here-->
+		</div>
+		<div id="user-slot-name-changer-box">
+			<paper-input id="user-slot-name-changer-input" label="enter new name"></paper-input><br>
+			<paper-button class="user-slot-name-changer-done">done</paper-button>
+		</div>
+
+		<div class="main-board">
+			<div class="main-board-column" data-title="icebox">
+				<div class="main-board-column-title">ICE BOX</div>
+			</div>
+			<div class="main-board-column" data-title="emergency">
+				<div class="main-board-column-title">EMERGENCY</div>
+			</div>
+			<div class="main-board-column" data-title="onhold">
+				<div class="main-board-column-title">ON HOLD</div>
+			</div>
+			<div class="main-board-column" data-title="testing">
+				<div class="main-board-column-title">TESTING</div>
+			</div>
+			<div class="main-board-column" data-title="complete" id="complete">
+				<div class="main-board-column-title">COMPLETE</div>
+			</div>
+		</div>
+		<div id="side-container">
+	 		<div id='side-bar-1'>
+		 		<paper-button id='add-person-butt'>Add User</paper-button>
+		 		<div id='color-box'>
+		 			<h2 class="">Add Sticky</h2>
+		 			<paper-radio-group selected="small">
+		  				<paper-radio-button data-color="red" class="red"></paper-radio-button>
+		  				<paper-radio-button data-color="blue" class="blue"></paper-radio-button>
+		  				<paper-radio-button data-color="green" class="green"></paper-radio-button>
+		  				<paper-radio-button data-color="yellow" class="yellow"></paper-radio-button>
+		  				<paper-radio-button data-color="orange" class="orange"></paper-radio-button>
+		  				<paper-radio-button data-color="amethyst" class="amethyst"></paper-radio-button>
+					</paper-radio-group>	
+					<paper-input id='add-label-text' label="Enter Label"></paper-input>
+					<paper-button id='add-label-butt'>Add</paper-button>
+		 		</div>
+	 		</div>
+	 		<div id="side-bar-2">
+	 			<i class='fa fa-bars' id='icon-right'></i>
+	 		</div>
+	 	</div>
+		<div class="modal"></div>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/default.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="components/webcomponentsjs/webcomponents.js"></script>
+	</body>
+</html>
